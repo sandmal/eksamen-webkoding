@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="A page to send in your application to NTNU Design Gjøvik. Book appointment time between Mon-Thu 08:00-16:00 and Fri 08:00-15:00">
+    <title>NTNU Design Gjøvik | Applications</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a73850b728.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-container" id="black-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programmes.html">Programmes</a></li>
+                <li><a href="application.html" id="active">Application</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="application">
+        <h1>Apply now at NTNU</h1>
+        <p> On this page you can apply for one of our design programmes and book appointment. The page shows a form
+            requesting information
+            we need to get started.</p>
+
+        <div id="application-grid" class="grid-container">
+            <form action="#" method="POST" id="form-grid-input">
+                <fieldset>
+                    <legend>Contact details</legend>
+                    <div id="application-grid-personal" class="grid-container">
+                        <label for="first-name">First name:
+                            <input type="text" id="first-name" name="first-name" maxlength="30" required="required"
+                                placeholder="Mike">
+                        </label>
+
+                        <label for="surname">Surname:
+                            <input type="text" id="surname" name="surname" maxlength="30" required="required"
+                                placeholder="Boiler">
+                        </label>
+
+                        <label for="street">Street address:
+                            <input type="text" id="street" name="street" maxlength="30" required="required"
+                                placeholder="Crown Street 29">
+                        </label>
+
+                        <label for="city">City:
+                            <input type="text" id="city" name="city" maxlength="30" required="required"
+                                placeholder="LONDON">
+                        </label>
+
+                        <label for="state">State / Province:
+                            <input type="text" id="state" name="state" maxlength="30" required="required"
+                                placeholder="Asker">
+                        </label>
+
+                        <label for="postal">Postal / Zip code:
+                            <input type="text" id="postal" name="postal" maxlength="30" required="required"
+                                placeholder="2816">
+                        </label>
+
+                        <label for="phone-number">Phone number:
+                            <input type="tel" id="phone-number" name="phone-number" maxlength="10" required="required"
+                                placeholder="12 34 56 78">
+                        </label>
+
+                        <label for="email">E-mail:
+                            <input type="email" id="email" name="email" maxlength="320" required="required"
+                                placeholder="email@example.com">
+                        </label>
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Application information</legend>
+                    <div id="application-grid-education" class="grid-container">
+                        <label for="programmes">What program are you applying to?
+                            <select name="programmes" id="programmes">
+                                <option value="bwu">Web Development (Bachelor's degree)</option>
+                                <option value="bixd">Interaction Design (Bachelor's degree)</option>
+                                <option value="bmed">Graphic Design (Bachelor's degree)</option>
+                                <option value="arweb">Web Design (One year programme)</option>
+                                <option value="mixd">Interaction Design (Master's degree)</option>
+                            </select>
+                        </label>
+
+                        <label for="education">Academic background
+                            <textarea name="education" id="education" required="required"
+                                placeholder="Tell us about your academic background(required)"></textarea>
+                        </label>
+
+                        <label for="comments">Other comments
+                            <textarea name="comments" id="comments"
+                                placeholder="Anything else we should now (not required)"></textarea>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Appointment time</legend>
+                    <div class="grid-container">
+                        <label for="apptDate">
+                            Choose your preferred meeting date (required, Todays date and up):
+                            <input id="apptDate" type="date" onchange="checkDate()" required>
+                        </label>
+                        <label for="apptTime">Choose an appointment time (opening hours Mon-Thu: 08:00-16:00 Fri:
+                            08:00-15:00):
+                            <input id="apptTime" type="time" min="08:00" max="16:00" value="08:00" required>
+                        </label>
+                    </div>
+                </fieldset>
+                <input id="apptSubmit" type="submit" value="Send application">
+            </form>
+
+            <aside>
+                <figure class="grid-figure mobile-hide" id="form-grid-image">
+                    <img src="assets/images/student-reading.jpg" alt="Student reading a book in the library">
+                </figure>
+            </aside>
+        </div>
+    </main>
+    <div id="language-container">
+        <strong class="fas fa-globe"></strong>
+        <a href="#" title="Norsk versjon av siden:">Norsk</a>
+    </div>
+    <footer id="footer-container">
+        <img src="assets/images/logo_ntnu_u-slagord_neg.png" alt="Image of NTNU logo without slogan" />
+        <span id="footer-title">Norwegian University of Science and Technology</span>
+        <p>About cookies</p>
+        <p>Privacy policy</p>
+        <p>Editorial responsibility</p>
+        <div id="footer-social-icons">
+            <a href="https://www.twitter.com/NTNU" class="fab fa-twitter" title="NTNUs offisielle Twitterkonto"></a>
+            <a href="https://www.facebook.com/ntnu.no" class="fab fa-facebook" title="Facebooksider fra NTNU"></a>
+            <a href="https://www.instagram.com/ntnu" class="fab fa-instagram"
+                title="NTNUs offisielle Instagramkonto"></a>
+            <a href="https://www.youtube.com/user/ntnuinfo" class="fa fa-play" title="NTNUs Youtubekonto"></a>
+            <a href="https://www.ntnu.no/aktuelt/blogger" class="fa fa-rss" title="Blogger på NTNU"></a>
+        </div>
+    </footer>
+    <script src="assets/scripts/form.js"></script>
+</body>
+
+</html>

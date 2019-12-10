@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="A overview over all programs and their courses at NTNU Design Gjøvik. Sort trough the programmes from low to high level, high to low level and alphabetical">
+    <title>NTNU Design Gjøvik | Programmes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a73850b728.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-container" id="black-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programmes.html" id="active">Programmes</a></li>
+                <li><a href="application.html">Application</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="programmes">
+        <div id="programmes">
+            <h1>Programmes</h1>
+            <p>We offer 3 bachelors, 1 master and 1-year programme in Gjøvik. on this page, we have gathered all the
+                programmes and their courses. Take a look.</p>
+            <div class="programmes-form">
+                <form>
+                    <label for="programmes-select">Programmes:
+                        <select name="programmes-select" id="programmes-select" onchange="displaySubjects(this.value);">
+                            <option value="">All programmes</option>
+                            <option value="bwu">BWU</option>
+                            <option value="mixd">MIXD</option>
+                            <option value="bmed">BMED</option>
+                            <option value="arweb">ARWEB</option>
+                        </select>
+                    </label>
+
+                    <label for="sort-select">Sorting:
+                        <select name="sort-select" id="sort-select" onchange="editDisplaySort(this.value);">
+                            <option value="sortLowLevel">Low Level</option>
+                            <option value="sortHighLevel">High Level</option>
+                            <option value="sortAtoZ">A - Z</option>
+                            <option value="sortZtoA">Z - A</option>
+                        </select>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div id="programmes-container"></div>
+
+        <script src="assets/scripts/programmes-db.js"></script>
+        <script src="assets/scripts/helpers.js"></script>
+        <script src="assets/scripts/show-all-courses.js"></script>
+
+    </main>
+
+    <div id="language-container">
+        <strong class="fas fa-globe"></strong>
+        <a href="#" title="Norsk versjon av siden:">Norsk</a>
+    </div>
+    <footer id="footer-container">
+        <img src="assets/images/logo_ntnu_u-slagord_neg.png" alt="Image of NTNU logo without slogan" />
+        <span id="footer-title">Norwegian University of Science and Technology</span>
+        <p>About cookies</p>
+        <p>Privacy policy</p>
+        <p>Editorial responsibility</p>
+        <div id="footer-social-icons">
+            <a href="https://www.twitter.com/NTNU" class="fab fa-twitter" title="NTNUs offisielle Twitterkonto"></a>
+            <a href="https://www.facebook.com/ntnu.no" class="fab fa-facebook" title="Facebooksider fra NTNU"></a>
+            <a href="https://www.instagram.com/ntnu" class="fab fa-instagram"
+                title="NTNUs offisielle Instagramkonto"></a>
+            <a href="https://www.youtube.com/user/ntnuinfo" class="fa fa-play" title="NTNUs Youtubekonto"></a>
+            <a href="https://www.ntnu.no/aktuelt/blogger" class="fa fa-rss" title="Blogger på NTNU"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
