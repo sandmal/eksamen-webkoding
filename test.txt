@@ -1,1 +1,2 @@
 Linje 1: dette er en test fra master;
+Linje 2: Dette er en test fra NewFeature;
