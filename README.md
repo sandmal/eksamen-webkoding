@@ -1,26 +1,27 @@
--------------- Folksite link -------------
+# -------------- Folksite link -------------
 
 link to live version of folksite:
- - http://folk.ntnu.no/cornelos/wkex/index.html
 
--------------- Responsive layout -------------
+- http://folk.ntnu.no/cornelos/wkex/index.html
+
+## -------------- Responsive layout -------------
 
 I have chosen to create three different page layouts. using mediaqueries i have one for mobile 375px, one for 600px and one for 1024px.
 The site is optimalized for mobile first and scales the elements etc up for the bigger screen resolutions.
 
-
--------------- JavaScript -------------
+## -------------- JavaScript -------------
 
 Optional task (coursework 4)
 
 The following tasks has been done:
- - To validate the form fields in the reservation page (all). In addition, take into account that: 
-	o Prospective students can't schedule a meeting in the past (date >= today). 
-	o Prospective students can only schedule a meeting during the opening hours. 
- - Courses can be filtered by programme.
- - Courses can be sorted by "course code", "level" or "description". 
 
--------------- Explaining of show-all-courses.js -------------
+- To validate the form fields in the reservation page (all). In addition, take into account that:
+  - Prospective students can't schedule a meeting in the past (date >= today).
+  - Prospective students can only schedule a meeting during the opening hours.
+- Courses can be filtered by programme.
+- Courses can be sorted by "course code", "level" or "description".
+
+### -------------- Explaining of show-all-courses.js -------------
 
 clearSubjects function is made to clear the programmes-container for javascript code
 The displaySubjects function has two parameters filter and sort which are used to determine which programmes and courses are displayed on function call
@@ -34,7 +35,7 @@ programmes array and get the courses each one contains. The previously declared 
 their respective programmes will be sorted. We then finally loop through the sorted courses in each programme and append their information into our container. We call the display
 Subjects function through a select menu's change with the filter select menu directly invoking the displaySubjects (as the sortOrder is presistant and doesn't need to be fetched).
 The sortOrder select menu goes through a subsidiary function editDisplaySort which grabs the our states filterOption and passes it along to displaySubjects function in addition with
-the sortOrder parameter. In the end, in order to display all courses on our first load, we call displaySubjects(false, "sortLowLevel"); which tells our program to display all courses 
+the sortOrder parameter. In the end, in order to display all courses on our first load, we call displaySubjects(false, "sortLowLevel"); which tells our program to display all courses
 in order of low to high.
 
 -------------- Explaining of form.js ------------------------
@@ -46,3 +47,4 @@ since you can't book appointments in the weekend.
 
 Last part of the if statement is else if. if the const checkDay returns a value between 1-4 (mon-thu) the .setAttribute("max", "16:00"); sets the attribute at 16:00 and
 sets the apptTime and apptSubmit .disabled = false; to prevent the time input field and the submit button to disable.
+
