@@ -37,7 +37,7 @@ I learned alot from this website and was an eye opener when it comes to finish a
 
 link to live version of folksite:
 
-- http://folk.ntnu.no/cornelos/wkex/index.html
+- http://folk.ntnu.no/cornelos/obligatoriske/wkex
 
 ## Responsive layout
 
